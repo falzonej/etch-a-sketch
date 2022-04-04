@@ -3,29 +3,25 @@
     justify-content: center;
 }
 
+
 #container{
     width: 960px;
     height: 960px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     border: solid 1px red;
 }
 
-.col{
+.colContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     border-style: solid;
     border-width: 2px;
     border-color: green;
-    display: inline;
     width: 40px;
     height: 40px;
 }
 
-.row{
-    border-style: solid;
-    border-width: 2px;
-    border-color: green;
-    display: inline;
-    width: 40px;
-    height: 40px;
-}
+
+
