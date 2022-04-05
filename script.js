@@ -1,5 +1,6 @@
 const container = document.querySelector('#container');
 const rowsContainer = document.querySelector('#rowsContainer')
+const col = document.querySelector('.col');
 
 
 
@@ -27,7 +28,7 @@ function createGridDivs(x, y) {
     }
     
 }
-createGridDivs(5,2)
+createGridDivs(10,10)
 
 //I want to write a program that will print as many rows as it 
 //needs to be equal to the 'y' value. And another function 

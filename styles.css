@@ -5,10 +5,10 @@
 
 
 .container{
-    width: 960px;
-    height: 960px;
+    width: auto;
+    height: auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     border: solid 1px red;
 }
 
@@ -23,9 +23,12 @@
     border-style: solid;
     border-width: 1px;
     border-color: green;
-    width: 40px;
-    height: 40px;
+    width: 10px;
+    height: 10px;
 }
 
+.col:hover{
+    background: purple;
+}
 
 
