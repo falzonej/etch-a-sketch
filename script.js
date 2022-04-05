@@ -27,7 +27,7 @@ function createGridDivs(x, y) {
     }
     
 }
-createGridDivs(3,2)
+createGridDivs(5,2)
 
 //I want to write a program that will print as many rows as it 
 //needs to be equal to the 'y' value. And another function 

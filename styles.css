@@ -1,10 +1,10 @@
-#title{
+.title{
     display: flex;
     justify-content: center;
 }
 
 
-#container{
+.container{
     width: 960px;
     height: 960px;
     display: flex;
@@ -15,9 +15,13 @@
 .colContainer{
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
+
+}
+
+.col{
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     border-color: green;
     width: 40px;
     height: 40px;
