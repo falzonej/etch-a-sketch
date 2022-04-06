@@ -9,7 +9,7 @@ function createRow(x,y) {
     colContainer.className = 'colContainer';
     rowsContainer.append(colContainer)
 
-        function addCol(y) {
+        function addCol() {
             const col = document.createElement('col');
             col.className = 'col';
             colContainer.append(col);
@@ -30,10 +30,7 @@ function createGridDivs(x, y) {
 }
 createGridDivs(10,10)
 
-//I want to write a program that will print as many rows as it 
-//needs to be equal to the 'y' value. And another function 
-//inside of the 'row' function that will create horizontal
-//divs equal to the 'x' measurement. That way it will take 'y'
-//print the row divs, then print the divs for the columns 
-//inside of the rows and we can set one css property to 
-//create the hover functionality desired.
+//I need to add a function that will add a class of touched
+// to each div after it is moused over and that class will
+// contain the styling for changing colors and can be group
+// cleared for the reset button later
