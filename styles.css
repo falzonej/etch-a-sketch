@@ -27,8 +27,11 @@
     height: 10px;
 }
 
-.col:hover{
+/*.col:hover{
     background: purple;
 }
+*/ 
 
-
+.touched{
+    background: aqua;
+}
