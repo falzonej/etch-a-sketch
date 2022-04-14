@@ -40,4 +40,7 @@ col.forEach(function(col){
         col.classList.add('touched');
     })})
 
-    
+    col.forEach(function(col){
+        resetButton.addEventListener('click', function() {
+            col.classList.remove('touched');
+        })})
