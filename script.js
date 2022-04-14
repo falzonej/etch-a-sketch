@@ -1,5 +1,6 @@
 const container = document.querySelector('#container');
 const rowsContainer = document.querySelector('#rowsContainer')
+const  resetButton = document.querySelector('#physicalResetButton');
 
 
 
@@ -28,7 +29,9 @@ function createGridDivs(x, y) {
     
 }
 
-createGridDivs(10,10)
+
+
+createGridDivs(100,100)
 
 const col = document.querySelectorAll('.col');
 
@@ -37,16 +40,4 @@ col.forEach(function(col){
         col.classList.add('touched');
     })})
 
-//col.addEventListener('mouseenter', function() {
-//    col.classList.add('touched')
-//})
-
-//I need to add a function that will add a class of touched
-// to each div after it is moused over and that class will
-// contain the styling for changing colors and can be group
-// cleared for the reset button later
-
-//if we want to add a color changing function to the 
-//E-A-S we could set a mouseon and mouseout event listener 
-//mouseon designed to change to a certain color and mouseout
-//with a function that produces a random color
+    
