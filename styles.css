@@ -3,12 +3,17 @@
     justify-content: center;
 }
 
-#containerResetButton{
+#containerButtons{
     display: flex;
     justify-content: center;
 }
 
-#physicalResetButton{
+#newGridButton{
+  background-color: chocolate;
+  color: aqua;
+}
+
+#resetButton{
     background-color:#0a0a23;
     color: #fff;
 }
