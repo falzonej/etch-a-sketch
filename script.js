@@ -35,12 +35,8 @@ newGridButton.addEventListener('click', function(){
   console.log(x)
   console.log(y)
   createGridDivs(x,y);
-})
-
-//createGridDivs(50,50)
-//createGridDivs(100,100)
-
-const col = document.querySelectorAll('.col');
+  
+  const col = document.querySelectorAll('.col');
 
 col.forEach(function(col){
     col.addEventListener('mouseover', function() {
@@ -51,6 +47,12 @@ col.forEach(function(col){
         resetButton.addEventListener('click', function() {
             col.classList.remove('touched');
         })})
+})
+
+//createGridDivs(50,50)
+//createGridDivs(100,100)
+
+
 
 //next add player input for grid size
 //then work on up and downsizing the window
