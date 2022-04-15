@@ -32,9 +32,13 @@ function createGridDivs(x, y) {
 newGridButton.addEventListener('click', function(){
   let x = prompt('Enter grid Height', '0');
   let y = prompt('Enter grid Width', '0')
-  console.log(x)
-  console.log(y)
+  if (x>100){
+    window.alert('That grid size is too large for this game, try again.');
+  }else if(y>100){
+    window.alert('That grid size is too large for this game, try again.')
+  }else{
   createGridDivs(x,y);
+  }
   
   const col = document.querySelectorAll('.col');
 
@@ -48,10 +52,6 @@ col.forEach(function(col){
             col.classList.remove('touched');
         })})
 })
-
-//createGridDivs(50,50)
-//createGridDivs(100,100)
-
 
 
 //next add player input for grid size
