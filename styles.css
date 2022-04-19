@@ -18,11 +18,12 @@
     color: #fff;
 }
 
-.container{
-    width: auto;
+#container{
+    width: 960px;
     height: auto;
     display: flex;
     justify-content: center;
+    margin: auto;
     border: solid 1px red;
 }
 
