@@ -13,9 +13,8 @@ function createRow(x,y) {
             const col = document.createElement('col');
             col.className = 'col';
             colContainer.append(col);
-
         }
-        
+
     for (let i = 0; i < y; i++){
             addCol();
         }
@@ -24,7 +23,6 @@ function createRow(x,y) {
 function createGridDivs(x, y) {
     for (let i = 0; i < x; i++){
         createRow(x,y);;
-        
     }
     
 }
@@ -61,3 +59,7 @@ newGridButton.addEventListener('click', function(){
 //next add player input for grid size
 //then work on up and downsizing the window
 //while keeping the grid the same pixel size
+//look into using the input number of rows
+//and columns to effect the height and width
+//of the col divs and make the scalable that
+//way
