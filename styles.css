@@ -28,7 +28,7 @@
 }
 
 #rowsContainer{
-  width: 100%;
+  width: 960px;
 }
 
 .colContainer{
@@ -42,8 +42,8 @@
     border-style: solid;
     border-width: 1px;
     border-color: green;
-    width: 1vh;
-    height: 1vh;
+    width: 10px;
+    height: 10px;
 }
 
 .touched{

@@ -53,6 +53,12 @@ newGridButton.addEventListener('click', function(){
     newGridButton.addEventListener('click', function(){
       col.remove();
     })})
+
+  
+  col.forEach(function(col){
+      col.addEventListener('click', function() {
+          col.style.width = '20px';
+    })})
 })
 
 
