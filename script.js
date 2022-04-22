@@ -1,8 +1,8 @@
 const container = document.querySelector('#container');
-const rowsContainer = document.querySelector('#rowsContainer')
+const rowsContainer = document.querySelector('#rowsContainer');
 const  resetButton = document.querySelector('#resetButton');
 const newGridButton = document.querySelector('#newGridButton');
-
+const resizeButton = document.querySelector('#resizeButton');
 
 function createRow(x,y) {
     const colContainer = document.createElement('colContainer');
@@ -56,8 +56,8 @@ newGridButton.addEventListener('click', function(){
 
   
   col.forEach(function(col){
-      col.addEventListener('click', function() {
-          col.style.width = '20px';
+      resizeButton.addEventListener('click', function() {
+          col.style.width = '5px';
     })})
 })
 
