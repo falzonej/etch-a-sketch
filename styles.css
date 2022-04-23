@@ -32,11 +32,11 @@
     border: solid 1px red;
 }
 
-#rowsContainer{
+#colsContainer{
   width: 957px;
 }
 
-.colContainer{
+.rowContainer{
     display: flex;
     justify-content: center;
     flex-direction: row;

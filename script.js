@@ -1,18 +1,18 @@
 const container = document.querySelector('#container');
-const rowsContainer = document.querySelector('#rowsContainer');
-const  resetButton = document.querySelector('#resetButton');
+const colsContainer = document.querySelector('#colsContainer');
+const resetButton = document.querySelector('#resetButton');
 const newGridButton = document.querySelector('#newGridButton');
 const resizeButton = document.querySelector('#resizeButton');
 
 function createRow(height,width) {
-    const colContainer = document.createElement('colContainer');
-    colContainer.className = 'colContainer';
-    rowsContainer.append(colContainer)
+    const rowContainer = document.createElement('rowContainer');
+    rowContainer.className = 'rowContainer';
+    colsContainer.append(rowContainer)
 
         function addCol() {
             const col = document.createElement('col');
             col.className = 'col';
-            colContainer.append(col);
+            rowContainer.append(col);
         }
 
     for (let i = 0; i < width; i++){
