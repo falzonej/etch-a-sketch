@@ -10,9 +10,9 @@ function createRow(height,width) {
     colsContainer.append(rowContainer)
 
         function addCol() {
-            const col = document.createElement('col');
-            col.className = 'col';
-            rowContainer.append(col);
+            const gridItem = document.createElement('gridItem');
+            gridItem.className = 'gridItem';
+            rowContainer.append(gridItem);
         }
 
     for (let i = 0; i < width; i++){
@@ -23,10 +23,8 @@ function createRow(height,width) {
 function createGridDivs(height, width) {
     for (let i = 0; i < height; i++){
         createRow(height,width);;
-    }
-    
+    }   
 }
-
 newGridButton.addEventListener('click', function(){
 let height = prompt('Enter grid Height', '0');
 let width = prompt('Enter grid Width', '0');
@@ -37,34 +35,28 @@ if (height>100){
   }else{
   createGridDivs(height,width);
   }
-  const col = document.querySelectorAll('.col');
+  const gridItem = document.querySelectorAll('.gridItem');
 
-  col.forEach(function(col){
-      col.addEventListener('mouseover', function() {
-          col.classList.add('touched');
+  gridItem.forEach(function(gridItem){
+      gridItem.addEventListener('mouseover', function() {
+          gridItem.classList.add('touched');
       })})
 
-  col.forEach(function(col){
+  gridItem.forEach(function(gridItem){
       resetButton.addEventListener('click', function() {
-          col.classList.remove('touched');
+          gridItem.classList.remove('touched');
       })})
       
-  col.forEach(function(col){
+  gridItem.forEach(function(gridItem){
     newGridButton.addEventListener('click', function(){
-      col.remove();
+      gridItem.remove();
     })})
 
-    col.forEach(function(col){
-      resizeButton.addEventListener('click', function() {
-          col.style.width = 960/width + 'px';
-          col.style.height = 960/height + 'px';
+  gridItem.forEach(function(gridItem){
+    resizeButton.addEventListener('click', function() {
+        gridItem.style.width = 960/width + 'px';
+        gridItem.style.height = 960/height + 'px';
     })})
 })
 
 
-//work on up and downsizing the window
-//while keeping the grid the same pixel size
-//look into using the input number of rows
-//and columns to effect the height and width
-//of the col divs and make the scalable that
-//way
