@@ -40,15 +40,15 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width: 100%;
+    width: fit-content;
 }
 
 .col{
     border-style: solid;
     border-width: 1px;
     border-color: green;
-    width: 10px;
-    height: 10px;
+    height: 960px;
+    width: 960px;
 }
 
 .touched{

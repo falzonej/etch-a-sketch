@@ -4,7 +4,7 @@ const  resetButton = document.querySelector('#resetButton');
 const newGridButton = document.querySelector('#newGridButton');
 const resizeButton = document.querySelector('#resizeButton');
 
-function createRow(x,y) {
+function createRow(height,width) {
     const colContainer = document.createElement('colContainer');
     colContainer.className = 'colContainer';
     rowsContainer.append(colContainer)
@@ -15,27 +15,27 @@ function createRow(x,y) {
             colContainer.append(col);
         }
 
-    for (let i = 0; i < y; i++){
+    for (let i = 0; i < width; i++){
             addCol();
         }
 }
 
-function createGridDivs(x, y) {
-    for (let i = 0; i < x; i++){
-        createRow(x,y);;
+function createGridDivs(height, width) {
+    for (let i = 0; i < height; i++){
+        createRow(height,width);;
     }
     
 }
 
 newGridButton.addEventListener('click', function(){
-  let x = prompt('Enter grid Height', '0');
-  let y = prompt('Enter grid Width', '0');
-  if (x>100){
+  let height = prompt('Enter grid Height', '0');
+  let width = prompt('Enter grid Width', '0');
+  if (height>100){
     window.alert('That grid size is too large for this game, try again.');
-  }else if(y>100){
+  }else if(width>100){
     window.alert('That grid size is too large for this game, try again.')
   }else{
-  createGridDivs(x,y);
+  createGridDivs(height,width);
   }
   const col = document.querySelectorAll('.col');
 
@@ -55,15 +55,17 @@ newGridButton.addEventListener('click', function(){
     })})
 
   
-  col.forEach(function(col){
+    col.forEach(function(col){
       resizeButton.addEventListener('click', function() {
-          col.style.width = '5px';
+          col.style.width = 960/width + 'px';
+          col.style.height = 960/height + 'px';
+          
+
     })})
 })
 
 
-//next add player input for grid size
-//then work on up and downsizing the window
+//work on up and downsizing the window
 //while keeping the grid the same pixel size
 //look into using the input number of rows
 //and columns to effect the height and width
