@@ -13,6 +13,8 @@ function createRow(height,width) {
             const gridItem = document.createElement('gridItem');
             gridItem.className = 'gridItem';
             rowContainer.append(gridItem);
+            gridItem.style.width = 960/width + 'px';
+            gridItem.style.height = 960/height + 'px';
         }
 
     for (let i = 0; i < width; i++){
@@ -40,6 +42,7 @@ if (height>100){
   gridItem.forEach(function(gridItem){
       gridItem.addEventListener('mouseover', function() {
           gridItem.classList.add('touched');
+          
       })})
 
   gridItem.forEach(function(gridItem){
@@ -52,11 +55,9 @@ if (height>100){
       gridItem.remove();
     })})
 
-  gridItem.forEach(function(gridItem){
-    resizeButton.addEventListener('click', function() {
-        gridItem.style.width = 960/width + 'px';
-        gridItem.style.height = 960/height + 'px';
-    })})
+//  gridItem.forEach(function(gridItem){
+//    resizeButton.addEventListener('click', function() {
+//      gridItem.style.width = 960/width + 'px';
+//      gridItem.style.height = 960/height + 'px';
+//    })})
 })
-
-
