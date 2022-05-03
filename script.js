@@ -2,7 +2,6 @@ const container = document.querySelector('#container');
 const colsContainer = document.querySelector('#colsContainer');
 const resetButton = document.querySelector('#resetButton');
 const newGridButton = document.querySelector('#newGridButton');
-const resizeButton = document.querySelector('#resizeButton');
 
 function createRow(height,width) {
     const rowContainer = document.createElement('rowContainer');
@@ -54,10 +53,4 @@ if (height>100){
     newGridButton.addEventListener('click', function(){
       gridItem.remove();
     })})
-
-//  gridItem.forEach(function(gridItem){
-//    resizeButton.addEventListener('click', function() {
-//      gridItem.style.width = 960/width + 'px';
-//      gridItem.style.height = 960/height + 'px';
-//    })})
 })
