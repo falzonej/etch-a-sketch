@@ -3,7 +3,7 @@ const colsContainer = document.querySelector('#colsContainer');
 const resetButton = document.querySelector('#resetButton');
 const newGridButton = document.querySelector('#newGridButton');
 
-function createRow(height,width) {
+function createRow(gridSize,gridSize) {
     const rowContainer = document.createElement('rowContainer');
     rowContainer.className = 'rowContainer';
     colsContainer.append(rowContainer)
@@ -12,29 +12,28 @@ function createRow(height,width) {
             const gridItem = document.createElement('gridItem');
             gridItem.className = 'gridItem';
             rowContainer.append(gridItem);
-            gridItem.style.width = 960/width + 'px';
-            gridItem.style.height = 960/height + 'px';
+            gridItem.style.height = 960/gridSize + 'px';
+            gridItem.style.width = 960/gridSize + 'px';
         }
 
-    for (let i = 0; i < width; i++){
+    for (let i = 0; i < gridSize; i++){
             addCol();
         }
 }
 
-function createGridDivs(height, width) {
-    for (let i = 0; i < height; i++){
-        createRow(height,width);;
+function createGridDivs(gridSize, gridSize) {
+    for (let i = 0; i < gridSize; i++){
+        createRow(gridSize,gridSize);;
     }   
 }
 newGridButton.addEventListener('click', function(){
-let height = prompt('Enter grid Height', '0');
-let width = prompt('Enter grid Width', '0');
-if (height>100){
+let gridSize = prompt('Enter grid size', '0');
+if (gridSize>100){
     window.alert('That grid size is too large for this game, try again.');
-  }else if(width>100){
+  }else if(gridSize>100){
     window.alert('That grid size is too large for this game, try again.')
   }else{
-  createGridDivs(height,width);
+  createGridDivs(gridSize,gridSize);
   }
   const gridItem = document.querySelectorAll('.gridItem');
 
