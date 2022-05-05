@@ -37,17 +37,23 @@ if (gridSize>100){
   }
   const gridItem = document.querySelectorAll('.gridItem');
 
+  
+
   gridItem.forEach(function(gridItem){
+    color = "#"
       gridItem.addEventListener('mouseover', function() {
-          gridItem.classList.add('touched');
-          
-      })})
+        placeHolder = "#"
+        color = placeHolder += Math.random().toString().slice(2,8);
+        gridItem.style.backgroundColor = color;
+        })})
 
   gridItem.forEach(function(gridItem){
       resetButton.addEventListener('click', function() {
-          gridItem.classList.remove('touched');
+          gridItem.setAttribute("style", "backgroundColor: white");
+          gridItem.style.height = 960/gridSize + 'px';
+          gridItem.style.width = 960/gridSize + 'px';
       })})
-      
+
   gridItem.forEach(function(gridItem){
     newGridButton.addEventListener('click', function(){
       gridItem.remove();
