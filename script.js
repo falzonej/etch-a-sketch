@@ -45,6 +45,7 @@ if (gridSize>100){
         placeHolder = "#"
         color = placeHolder += Math.random().toString().slice(2,8);
         gridItem.style.backgroundColor = color;
+        gridItem.style.opacity += '0.5';
         })})
 
   gridItem.forEach(function(gridItem){
