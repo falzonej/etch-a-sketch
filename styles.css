@@ -1,30 +1,30 @@
 .title{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #containerButtons{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #newGridButton{
-  background-color: chocolate;
-  color: aqua;
+  background-color: green;
+  color: gold;
 }
 
 #resetButton{
-    background-color:#0a0a23;
-    color: #fff;
+  background-color:red;
+  color: gold;
 }
 
 #container{
-    width: 958px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    border: solid 1px red;
+  width: 958px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border: solid 1px black;
 }
 
 #colsContainer{
@@ -32,17 +32,15 @@
 }
 
 .rowContainer{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    width: 957px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 957px;
 }
 
 .gridItem{
-    border-style: solid;
-    border-width: 1px;
-    border-color: green;
-    height: 960px;
-    width: 960px;
+  border: solid 1px grey;
+  height: 960px;
+  width: 960px;
 }
 
